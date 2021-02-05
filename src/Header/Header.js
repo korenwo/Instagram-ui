@@ -3,11 +3,8 @@ import './Header.scss';
 
 function Header (props) {
     return (
-        <header className= "header">
-            <h1>instagram</h1>
-
-          
-
+        <header className="header">
+            <h1>Instagram</h1>
         </header>
     );
 }
