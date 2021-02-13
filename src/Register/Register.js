@@ -1,13 +1,31 @@
-import React from 'react';
-import './Register.scss'
+import { React, useState } from 'react';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
-import { RegisterSchema } from './register.schema';
+import { useHistory } from 'react-router-dom';
+import './Register.scss'
+import { registerSchema } from './register.schema';
+import { UserService } from '../services/user.service';
 
 function Register (props) {
+
+    const history = useHistory();
+
+    const [errorMsg, setErrorMsg] = useState(0);
+
+    function submit(values) {
+        UserService.register(values)
+            .then(data => {
+                if(data.isSccuess) {
+                    history.push('/login');
+                    return;
+                }
+                setErrorMsg(data.message);
+            });
+    }
+
     return (
         <div className="register">
             <h2>Register</h2>
-            <Formik initialValues={{username: '', email: '', password: '', agreeToTerms: false}} validationSchema={RegisterSchema}>
+            <Formik initialValues={{username: '', email: '', password: '', agreeToTerms: false}} validationSchema={registerSchema} onSubmit={submit}>
                 <Form>
                     <div className="form-group mb-3">
                         <label htmlFor="username">Username</label>
@@ -32,6 +50,7 @@ function Register (props) {
                     <div className="form-group">
                         <button type="submit" className="btn btn-success">Register</button>
                     </div>
+                    <p className="error">{errorMsg}</p>
                 </Form>
             </Formik>
         </div>
