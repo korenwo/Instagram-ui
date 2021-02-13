@@ -17,9 +17,6 @@ function App() {
     UserService.me()
       .then(user => {
         if (!user) {
-          console.log('Fuck you');
-          //history.push('/login');
-          //window.location.href = '/login';
         }
       });
   }, [history]);
