@@ -33,7 +33,7 @@ function Login () {
         <div className="loginContainer">
             <img src={sum2} className="sum2Image" alt="Instagram" />
             <div className="Login">
-                <h1>Login</h1>
+                <h1 className="login">Login</h1>
                 {showError && <div className="alert alert-denger">Incorrect username or password</div>}
                 <Formik initialValues={{username: '', email: '', password: ''}} validationSchema={loginSchema} onSubmit={submit}>
                     <Form>

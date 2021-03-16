@@ -12,7 +12,6 @@ function HeaderAvatar() {
         <div className="HeaderAvatar">
             <Link to={'/profile/' + user.username}>
             <Avatar />
-            { user.username }
            </Link> 
         </div>
 

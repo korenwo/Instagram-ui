@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './Comments.scss';
-import CommentAdd from './../CommentAdd/CommentAdd';
+import CommentAdd from './CommentAdd/CommentAdd';
 import { PostService } from './../../services/post.service';
+import Comment from './Comment/Comment';
 
 
 function Comments ({ postId }) {
@@ -11,8 +12,8 @@ function Comments ({ postId }) {
     useEffect(() => {
         async function getComments() {
             try {
-                const comments = await PostService.getComments(postId);
-                
+                const commentsArr = await PostService.getComments(postId)
+                setComments(commentsArr);
             } catch(err) {
                 console.log(err);
             }
@@ -20,13 +21,17 @@ function Comments ({ postId }) {
         getComments();
     }, [postId]);
 
+    function onCommentAdd(Comment) {
+        setComments([...comments, Comment]);
+    }
     
-    
-
     return (
         <div>
            <h2 className> Comments </h2>
-          
+           <div>
+            {comments.map(comment => <Comment key={comment._id} comment={comment} />)}      
+        </div>
+        <CommentAdd postId={postId} onCommentAdd={onCommentAdd} />
         </div>
     );
 }

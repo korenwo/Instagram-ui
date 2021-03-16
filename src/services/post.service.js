@@ -1,6 +1,5 @@
 import { UserService } from './user.service';
 import environment from '../environments/index'
-import CommentAdd from './../common/CommentAdd/CommentAdd';
 
 export class PostService {
 
@@ -43,10 +42,10 @@ export class PostService {
         return res.json();
     }
 
-    static async addComment(postId) {
+    static async getComments(postId) {
         const res = await fetch(environment.apiUrl + '/post/' + postId + '/Comment', {
             headers:{
-                Authorization:UserService.getToken(),
+                Authorization:UserService.getToken()
             }
         });
         return res.json();

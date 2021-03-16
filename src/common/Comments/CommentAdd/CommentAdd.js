@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import './CommentAdd.scss';
-import { PostService } from './../../services/post.service';
+import { PostService } from '../../../services/post.service';
 
-function CommentAdd  ({ postId }) {
+function CommentAdd  ({ postId, onCommentAdd }) {
 
     const [content, setContent] = useState('');
 
-    function submit(e) {
+    async function submit(e) {
         e.preventDefault();
-        PostService.addComment(postId, content)
+        const comment = await PostService.addComment(postId, content);
+        onCommentAdd(comment);
+        setContent('');
     }
 
     return (
