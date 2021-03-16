@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie';
-import environment from '../environments/index'
+import environment from '../environments/index';
 
 export class UserService {
 
@@ -60,7 +60,7 @@ export class UserService {
     return res.json();
     }
 
-    static async search(username) {
+    static async Search(username) {
       const res = await fetch(environment.apiUrl + '/user?username=' + username, {
         headers:{
           Authorization: UserService.getToken()

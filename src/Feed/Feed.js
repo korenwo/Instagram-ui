@@ -34,7 +34,6 @@ function Feed () {
         <div>
             <div className= "posts">
                 <Link to={'/profile/' + user.username}>
-                    <Avatar />
                 { user.username }
                 </Link> 
                 {posts.map(post => (
