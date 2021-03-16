@@ -14,7 +14,7 @@ function Register (props) {
     function submit(values) {
         UserService.register(values)
             .then(data => {
-                if(data.isSccuess) {
+                if(data.isSuccess) {
                     history.push('/login');
                     return;
                 }

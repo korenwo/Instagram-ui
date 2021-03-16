@@ -1,60 +1,71 @@
-
 import Cookies from 'js-cookie';
+import environment from '../environments/index'
 
 export class UserService {
 
-  static login (values) {
-    return fetch('http://localhost:4000/user/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(values)
-    })
-    .then(res => {
-      if(res.status === 200) {
-        res.json().then(json => {
-          Cookies.set(`instagram-user`, json.token, { expires: 30 });
-        });
-        return true;
-      }
-      return false;
-    });
+  static getToken() {
+    return Cookies.get('instagram-user');
   }
 
-  static register(values) {
-    return fetch('http://localhost:4000/user', {
+  static me() {
+    return fetch(environment.apiUrl + '/user/me', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: UserService.getToken()
+			}
+		}).then(res => {
+			if (res.status !== 200) {
+				return null;
+			}
+			return res.json();
+		});
+  }
+
+  static create(data) {
+    return fetch(environment.apiUrl + '/user', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(values)
-    })
-    .then(res => res.json())
-    .then(res => {
-      if(res.status === 201) {
-        return {isSuccess: true};
-      }
-      return {isSuccess: false, message: res.message};
+      body: JSON.stringify(data)
     });
   }
 
-  static me() {
-    const body = {
-      token: Cookies.get('instagram user')
-    };
-    return fetch('http://localhost:4000/user/me', {
-      method:'POST',
-      headers:{
-        'Content-type': 'application/json'
-      },
-      body:JSON.stringify(body)
-    }).then(res => { 
-      if (res.status !== 200) {
-        return null;
-      }
+  static login(credentials) {
+		return fetch(environment.apiUrl + '/user/login', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(credentials)
+		});
+	}
+
+  static async getPosts(username) {
+      const res = await fetch(environment.apiUrl + '/user/' + username + '/posts', {
+        headers:{
+          Authorization: UserService.getToken()
+        }
+      });
     return res.json();
-    });
-  }
-}
+    }
+  
+    static async get(username) {
+      const res = await fetch(environment.apiUrl + '/user/' + username, {
+        headers:{
+          Authorization: UserService.getToken()
+        }
+      });
+    return res.json();
+    }
 
+    static async search(username) {
+      const res = await fetch(environment.apiUrl + '/user?username=' + username, {
+        headers:{
+          Authorization: UserService.getToken()
+        }
+      });
+    return res.json();
+    }
+}  

@@ -1,37 +1,36 @@
-.Login {
-    padding: 1em 3em;
-}
+@media only screen and (max-device-width : 480px) {
+    .LoginContainer, .Login {
+        display: block;
+        background-color: #fff;
+        border: 1px solid #c0c0c0;
+        margin-left: 36%;
+        margin-top: 50px;
+    }
 
-h2 {
-    text-align: center;
-    color: darkblue;
-    font-style: italic;
-    margin-top: 0;
-}
+    .sum2Image{
+        position: absolute;
+        height: 100px;
+        width: 120px;
+        height: 300px;
+    }
 
-form {
-    margin-top: 20px;
-    color: darkblue;
-}
-
-.form-control {
-    background-color: #E8F0FE;
-}
-
-.error {
-    color: red;
-}
-.error::before {
-    content: '🛈';
-    margin-right: 0.3em;
 }
 
 @media only screen and (min-width : 1224px) {
-    .Login {
-        max-width: 30em;
-        margin:auto;
+    .LoginContainer, .Login {
+        display: block;
+        max-width: 15em;
         background-color: #fff;
         border: 1px solid #c0c0c0;
         padding: 1em 3em;
+        margin-left: 40%;
+        margin-top: 50px;
     }
+
+    .sum2Image{
+        margin-left: 20%;
+        position: absolute;
+        height: 200px;
+    }
+
 }

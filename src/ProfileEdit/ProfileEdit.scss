@@ -1,0 +1,58 @@
+@media only screen and (max-device-width : 480px) {
+
+    .edit{
+        font-size: 20px;
+    }
+
+
+    form {
+        margin-top: 50px;
+        width: 50%;
+        background-color: white;
+    }
+
+    .lable{
+        display: none;
+    }
+
+    .changeP{
+        color: rgb(83, 157, 232);
+        font-size: 12px;
+        text-align: center;
+        }    
+}    
+
+@media only screen and (min-width : 1224px) {
+   
+
+    .editContainer {
+        position: relative;
+        width: 40%;
+        margin:auto;
+        margin-top: 50px;
+        border: 1px solid #c0c0c0;
+        background-color: white;
+        text-align: center;
+    }
+
+    .form-group{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 300px;
+        margin-left: 25%;
+    }
+
+
+    .submitBtn{
+        background-color: rgb(70, 149, 244);
+        color: whitesmoke;
+    }
+
+    .changeP{
+        color: rgb(83, 157, 232);
+        font-size: 15px;
+        }
+
+}
+

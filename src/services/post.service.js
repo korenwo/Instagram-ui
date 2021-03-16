@@ -1,0 +1,57 @@
+import { UserService } from './user.service';
+import environment from '../environments/index'
+import CommentAdd from './../common/CommentAdd/CommentAdd';
+
+export class PostService {
+
+    static feed() {
+       return fetch(environment.apiUrl + '/post?sort=-1', {
+            headers: {
+                Authorization:UserService.getToken()
+            }
+        }).then(res => res.json());
+    }
+
+    static async get(id) {
+        const res = await fetch(environment.apiUrl + '/post/' + id, {
+            headers:{
+                Authorization:UserService.getToken()
+            }
+        });
+        return res.json();
+    }
+
+    static async like(id) {
+        const res = await fetch(environment.apiUrl + '/posts/' + id + '/like', {
+            method: 'POST',
+            headers:{
+                Authorization:UserService.getToken()
+            }
+        });
+        return res.json();
+    }
+
+    static async addComment(postId, content) {
+        const res = await fetch(environment.apiUrl + '/post/' + postId + '/Comment', {
+            method: 'PUT',
+            headers:{
+                Authorization:UserService.getToken(),
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ content })
+        });
+        return res.json();
+    }
+
+    static async addComment(postId) {
+        const res = await fetch(environment.apiUrl + '/post/' + postId + '/Comment', {
+            headers:{
+                Authorization:UserService.getToken(),
+            }
+        });
+        return res.json();
+    }
+
+
+}
+

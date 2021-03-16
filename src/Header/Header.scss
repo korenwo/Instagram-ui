@@ -1,14 +1,62 @@
-.header h1 {
-    text-align: center;
-    color: blue;
-    font-size: 3em;
-    font-family:'Playfair Display', serif;
-    font-style: italic;
-    margin: 0.5em 0;
-}
+@media only screen and (max-device-width : 480px) {
 
+    .header {
+        background-color: white;
+        position: fixed;
+        bottom:0;
+        right: 0;
+        left: 0;
+        border: 3px solid #555;
+    }
+
+    .navbar {
+        display: flex;     
+    }
+
+    .logo{
+        display: none;
+    }
+ 
+    .nav-link {   
+        transition: color 200ms;
+        font-size: 1.7em;
+        padding: 0 12px;
+        
+        &:hover {
+            color: #f54555;
+            text-decoration: none;
+        }
+    }
+}    
 @media only screen and (min-width : 1224px) {
+  
+    .navbar {
+        display: flex; 
+        width: 900px;
+        margin: auto;    
+    }
+
+    .header {
+        position: static;
+        background-color: white;
+        border: 2px solid lightgray;
+        height: 50px;
+    }
+
+    .logo {
+        color: black;
+        width: 170px;
+        height: 50px;
+    }
+
     .header h1 {
         font-size: 4em;
     }
+
+    .header .icons {
+        margin-right: 20px;
+        flex-grow: 1;
+    }
 }
+
+    
