@@ -1,11 +1,37 @@
 @media only screen and (max-device-width : 480px) {
+    .ProfileHeader{
+        display: flex;
+        align-items: center;
+    }
+
+     
+    .bigAvatar .Avatar{
+        width: 120px;
+        height: 120px;
+        margin-right: 50px;
+    }
 
 }
 
 @media only screen and (min-width : 1224px) {
 
-    button{
-        background-color:white;
+    .ProfileHeader{
+        width: 600px;
+        margin: auto;
+        display: flex;
+        align-items: center;
     }
 
+    button{
+        background-color:white;
+        width: 90px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    
+    .bigAvatar .Avatar{
+        width: 150px;
+        height: 150px;
+        margin-right: 50px;
+    }
 }   

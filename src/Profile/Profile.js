@@ -14,23 +14,22 @@ function Profile () {
     useEffect(()=> {
         async function getPosts() {
             try {
-            const posts = await UserService.getPosts(username);
-            setPosts(posts);
-        } catch(err) {
-            console.log(err);
+                const posts = await UserService.getPosts(username);
+                setPosts(posts);
+            } catch(err) {
+                console.log(err);
+            }
         }
-    }
-    
-    getPosts();
-}, [username]);
+        getPosts();
+    }, [username]);
 
     return (
     <>
         <ProfileHeader username={username} postNum={posts.length} />
         <hr />
-        <div className="row">
+        <div className="photosContainer">
             {posts.map(post => (
-                <Post key={post._id} data={post} />
+                <Post key={post._id} data={post} small={true} />
             ))}
         </div>
     </>

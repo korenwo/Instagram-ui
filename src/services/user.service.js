@@ -22,7 +22,7 @@ export class UserService {
 		});
   }
 
-  static create(data) {
+  static Create(data) {
     return fetch(environment.apiUrl + '/user', {
       method: 'PUT',
       headers: {
@@ -60,7 +60,7 @@ export class UserService {
     return res.json();
     }
 
-    static async Search(username) {
+    static async search(username) {
       const res = await fetch(environment.apiUrl + '/user?username=' + username, {
         headers:{
           Authorization: UserService.getToken()
@@ -68,4 +68,15 @@ export class UserService {
       });
     return res.json();
     }
+
+    static async follow(id) {
+      const res = await fetch(environment.apiUrl + '/user/' + id + '/follow', {
+          method: 'POST',
+          headers:{
+              Authorization:UserService.getToken()
+          }
+      });
+      return res.json();
+  }
+
 }  

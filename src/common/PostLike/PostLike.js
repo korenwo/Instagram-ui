@@ -4,7 +4,7 @@ import { PostService } from '../../services/post.service';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-function PostLike ({post}) {
+function PostLike ({post, user}) {
 
     const [likes, setLikes] = useState(post.likes);
 
@@ -15,7 +15,8 @@ function PostLike ({post}) {
 
     return (
         <div>
-            <FontAwesomeIcon icon={ faHeart } /><button onClick={addLike}>Likes {likes}</button>
+            <a><FontAwesomeIcon icon={ faHeart } onClick={addLike} /></a> 
+            <div className="likes">Likes {likes}</div>
         </div>
     );
 }

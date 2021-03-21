@@ -1,3 +1,7 @@
+@media only screen and (max-device-width : 480px) {
+    
+}
+
 @media only screen and (min-width : 1224px) {
 
     body {
@@ -9,6 +13,10 @@
     
     a {
         color: inherit;
+    }
+
+    .button{
+        background: 30px;
     }
 
 }

@@ -1,13 +1,10 @@
 import React from 'react';
-import Avatar from './../../Avatar/Avatar';
-import Comments from './../Comments';
+import './Comment.scss';
 
-function Comment  ({ Comment }) {
+function Comment  ({ comment }) {
     return (
         <div>
-                <Avatar image={Comment.user.avatar} />
-                <p>{Comment.Comment}</p>
-                <span>{Comment.createAt}</span>
+            {comment.user.username}: {comment.content} - {comment.createAt}
         </div>
     );
 }

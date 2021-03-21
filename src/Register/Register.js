@@ -4,18 +4,19 @@ import { useHistory } from 'react-router-dom';
 import './Register.scss'
 import { registerSchema } from './register.schema';
 import { UserService } from '../services/user.service';
+import Login from './../Login/Login';
 
 function Register (props) {
 
     const history = useHistory();
 
-    const [errorMsg, setErrorMsg] = useState(0);
+    const [errorMsg, setErrorMsg] = useState();
 
     function submit(values) {
-        UserService.register(values)
+        UserService.Create(values)
             .then(data => {
                 if(data.isSuccess) {
-                    history.push('/login');
+                    history.push('/');
                     return;
                 }
                 setErrorMsg(data.message);
@@ -24,7 +25,7 @@ function Register (props) {
 
     return (
         <div className="register">
-            <h2>Register</h2>
+            <h2>Sign Up</h2>
             <Formik initialValues={{username: '', email: '', password: '', agreeToTerms: false}} validationSchema={registerSchema} onSubmit={submit}>
                 <Form>
                     <div className="form-group mb-3">
@@ -48,7 +49,7 @@ function Register (props) {
                         <ErrorMessage name="agreeToTerms" component="div" className="error" />
                     </div>
                     <div className="form-group">
-                        <button type="submit" className="btn btn-success">Register</button>
+                        <button type="submit" className="btn btn-success">Sign Up</button>
                     </div>
                     <p className="error">{errorMsg}</p>
                 </Form>

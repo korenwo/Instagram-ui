@@ -2,6 +2,7 @@
 
     .edit{
         font-size: 20px;
+        font-style: italic;
     }
 
 
@@ -15,10 +16,10 @@
         display: none;
     }
 
-    .changeP{
-        color: rgb(83, 157, 232);
+    .change{
+        color: 	#800080;
         font-size: 12px;
-        text-align: center;
+        font-style: italic;
         }    
 }    
 
@@ -45,11 +46,11 @@
 
 
     .submitBtn{
-        background-color: rgb(70, 149, 244);
+        background-color: #00ffff;;
         color: whitesmoke;
     }
 
-    .changeP{
+    .change{
         color: rgb(83, 157, 232);
         font-size: 15px;
         }

@@ -33,7 +33,7 @@ return (
                 onSubmit={submit}>
                 {({setFieldValue, isSubmitting}) => (
                     <Form>
-                        <h2 className="changeP">Change Profile Photo</h2>
+                        <h2 className="change">Change Profile Photo</h2>
                         <input type="file"
                             id="avatar"
                             name="avatar"

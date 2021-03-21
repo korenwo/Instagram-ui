@@ -3,7 +3,8 @@ import './Comments.scss';
 import CommentAdd from './CommentAdd/CommentAdd';
 import { PostService } from './../../services/post.service';
 import Comment from './Comment/Comment';
-
+import { faComment } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Comments ({ postId }) {
 
@@ -12,7 +13,7 @@ function Comments ({ postId }) {
     useEffect(() => {
         async function getComments() {
             try {
-                const commentsArr = await PostService.getComments(postId)
+                const commentsArr = await PostService.getComments(postId);
                 setComments(commentsArr);
             } catch(err) {
                 console.log(err);
@@ -21,18 +22,24 @@ function Comments ({ postId }) {
         getComments();
     }, [postId]);
 
-    function onCommentAdd(Comment) {
-        setComments([...comments, Comment]);
+    function onCommentAdd(comment) {
+        setComments([...comments, comment]);
     }
     
     return (
+       
         <div>
-           <h2 className> Comments </h2>
-           <div>
-            {comments.map(comment => <Comment key={comment._id} comment={comment} />)}      
+            <details>
+            <summary><h2 className="comment">Comments</h2> <FontAwesomeIcon icon={ faComment } size="lg"  /></summary>
+            <hr></hr>
+           
+                
+                    <div className="comment">{comments.map(comment => <Comment key={comment._id} comment={comment} />)}</div>
+                        <CommentAdd postId={postId} onCommentAdd={onCommentAdd} />
+                
+            </details> 
         </div>
-        <CommentAdd postId={postId} onCommentAdd={onCommentAdd} />
-        </div>
+        
     );
 }
 

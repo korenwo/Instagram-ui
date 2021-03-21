@@ -43,9 +43,9 @@ export class PostService {
     }
 
     static async getComments(postId) {
-        const res = await fetch(environment.apiUrl + '/post/' + postId + '/Comment', {
+        const res = await fetch(environment.apiUrl + '/post/' + postId + '/comment', {
             headers:{
-                Authorization:UserService.getToken()
+                Authorization: UserService.getToken()
             }
         });
         return res.json();

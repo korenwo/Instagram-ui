@@ -1,41 +1,75 @@
 @media only screen and (max-device-width : 480px) {
 
-    .LoginContainer, .Login {
+    .insta{
+        width: 60px;
         display: block;
-        text-align: center;
-        max-width: 15em;
-        background-color: #fff;
-        border: 1px solid white;
-        margin-left: 36%;
-        margin-top: 50px;
+        margin: auto;
     }
 
     .login{
         font-size: 20px;
-        position: absolute;
+        text-align: center;
+        margin-top: 10px;
     }
 
     .sum2Image{
         display: none;
     }
 
+    .form-control{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 150px;
+        margin-left: auto;
+        background-color: #00ffff;
+        border-radius: 30px;
+    }
+
+    button{
+        margin-top: 10px;
+        border-radius: 30px;
+        
+    }
+
+    .alert{
+        font-size: 10px;
+        position: absolute;
+        margin-top: 220px;
+        color: red;
+    }
+
 }
 
 @media only screen and (min-width : 1224px) {
-    .LoginContainer, .Login {
+    .Login {
         display: block;
+        margin: auto;
         max-width: 15em;
         background-color: #fff;
         border: 1px solid #c0c0c0;
         padding: 1em 3em;
-        margin-left: 40%;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
-    .sum2Image{
-        margin-left: 20%;
-        position: absolute;
+    .insta{
+        margin: auto;
+        display: block;
         height: 200px;
+        margin-top: 30px;
     }
+
+    .form-control{
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+.btn{
+    margin-top: 20px;
+    border-radius: 30%;
+}
+
+.alert{
+    color: red;
+}
 
 }

@@ -7,7 +7,7 @@ function Avatar (props) {
 
     const image = props.image || avatar;
     const propTypes = {
-        size: PropTypes.oneOf(['sm', 'md', 'lg'])
+    size: PropTypes.oneOf(['sm', 'md', 'lg'])
     };
             console.log(props, 'avatar')
 

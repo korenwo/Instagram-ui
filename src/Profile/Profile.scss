@@ -1,0 +1,27 @@
+@media only screen and (max-device-width : 480px) {
+
+    .photosContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .photosContainer .image{
+        width: 50px;
+        height: auto;
+    }
+}
+
+
+@media only screen and (min-width : 1224px) {
+    
+    .photosContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .photosContainer .image{
+        width: 300px;
+        height: auto;
+    }
+
+}

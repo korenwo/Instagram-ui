@@ -1,8 +1,14 @@
 @media only screen and (max-device-width : 480px) {
 
+    .preview-image{
+        width:100px;
+    }
 
+    .new{
+        font-family: Georgia;
+        font-style: italic;
+    }
 }
-
 
 @media only screen and (min-width : 1224px) {
 
@@ -13,6 +19,7 @@
         font-style: italic;
         font-size: 80px;
         margin-top: 50px;
+        font-family: Georgia;
     }
 
     .create {
@@ -45,6 +52,11 @@
         border: 1px solid #c0c0c0;
         margin-right: 50px;
         font-size: 20px;
+    }
+
+    .PostCreate{
+        font-size: 18px;
+        color: red;
     }
 
 }

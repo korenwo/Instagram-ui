@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 import { useHistory, Link } from 'react-router-dom';
 import { loginSchema } from './login.schema'; 
 import './Login.scss';
-import sum2 from './sum2.png'
+import insta from './insta.png'
 import { UserService } from '../services/user.service';
 import { UserContext } from './../user-context';
 
@@ -31,9 +31,8 @@ function Login () {
 
     return (
         <div className="loginContainer">
-            <img src={sum2} className="sum2Image" alt="Instagram" />
+            <img src={insta} className="insta" alt="Instagram" />
             <div className="Login">
-                <h1 className="login">Login</h1>
                 {showError && <div className="alert alert-denger">Incorrect username or password</div>}
                 <Formik initialValues={{username: '', email: '', password: ''}} validationSchema={loginSchema} onSubmit={submit}>
                     <Form>
@@ -51,7 +50,7 @@ function Login () {
                             <button type="submit" className="btn btn-success">Login</button>
                         </div>
                         <div className="text">
-                            Don't have an account? <Link to="/register" className="Login__register-link">Register</Link>
+                            Don't have an account? <Link to="/register" className="Login__register-link">Sign Up</Link>
                         </div>
                     </Form> 
                 </Formik>
