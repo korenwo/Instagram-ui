@@ -5,21 +5,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 function PostLike ({post, user}) {
+ 
+    const [likes, setLikes] = useState (post?.likes?.length || 0 );
 
-    const [likes, setLikes] = useState(post.likes);
-
-    async function addLike() {
-		const res = await PostService.like(post._id);
-        setLikes(res.likes);
-	}
+    async function addLike () {
+        const res = await PostService.like(post._id);
+        setLikes(res.likes.length);
+    }
 
     return (
         <div>
-            <a><FontAwesomeIcon icon={ faHeart } onClick={addLike} /></a> 
+            <a><FontAwesomeIcon icon={ faHeart } /></a> 
             <div className="likes">Likes {likes}</div>
         </div>
     );
 }
+
+
 
 
 export default PostLike;

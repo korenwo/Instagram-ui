@@ -50,7 +50,7 @@ function Login () {
                             <button type="submit" className="btn btn-success">Login</button>
                         </div>
                         <div className="text">
-                            Don't have an account? <Link to="/register" className="Login__register-link">Sign Up</Link>
+                            Don't have an account? <Link to="/register" className="Login__register-link">Sign Up!</Link>
                         </div>
                     </Form> 
                 </Formik>

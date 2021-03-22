@@ -1,5 +1,7 @@
+import { development } from './development';
+import { production } from './production';
+import environment from './index';
 
-
-import { environment } from './development';
+let environment = development;
 
 export default environment;

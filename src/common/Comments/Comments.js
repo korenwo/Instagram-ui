@@ -27,10 +27,9 @@ function Comments ({ postId }) {
     }
     
     return (
-       
         <div>
             <details>
-            <summary><h2 className="comment">Comments</h2> <FontAwesomeIcon icon={ faComment } size="lg"  /></summary>
+                <summary className="comment">Comments...... <FontAwesomeIcon icon={ faComment } size="lg"  /></summary>
             <hr></hr>
            
                 
