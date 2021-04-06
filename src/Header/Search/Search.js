@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faPlusSquare, faCompass, faHeart, faSearch, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPlusSquare, faSearch, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 import './Search.scss';
 import { UserService } from '../../services/user.service';
@@ -55,12 +55,6 @@ function Search () {
                     <Link to="/post/create">
                         <FontAwesomeIcon icon={ faPlusSquare } size="lg" />
                     </Link>
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={ faCompass } size="lg" />
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={ faHeart } size="lg" />
                 </li>
                 <li>
                     <Link to="/Search">
