@@ -8,7 +8,7 @@
     .header {
         background: linear-gradient(
             90deg,
-            rgb(173, 221, 237),
+            rgb(103, 64, 232),
             rgb(219, 13, 58) 100%
         );
         background-color: rgb(219, 13, 58) 100%;
@@ -53,12 +53,12 @@
     .header {
         background: linear-gradient(
             90deg,
-            rgb(173, 221, 237),
+            rgb(103, 64, 232),
             rgb(219, 13, 58) 100%
         );
         position: static;
         background-color: rgb(173, 221, 237);
-        border: 2px solid   rgb(219, 13, 58) 100%;
+        border: 0px solid   ;
         height: 50px;
     }
 
