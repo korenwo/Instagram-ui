@@ -3,7 +3,7 @@ import './Comment.scss';
 
 function Comment  ({ comment }) {
     return (
-        <div>
+        <div className="comment">
             {comment.user.username}: {comment.content} - {comment.createAt}
         </div>
     );

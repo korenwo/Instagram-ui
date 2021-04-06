@@ -6,10 +6,8 @@ function Followers ({user}) {
     
     const [followers, setFollowrs] = useState (user?.followers?.length || 0 );
 
-    useEffect(()=> {
-        if(user.followers) {}
-        setFollowrs(user?.followers?.length);
-    }, [user]);
+    if(user.followers) {}
+    setFollowrs(user?.followers?.length);
 
     async function addFollower () {
         const res = await UserService.follow(user._id);

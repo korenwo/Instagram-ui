@@ -4,16 +4,29 @@
         width:100px;
     }
 
+    form{
+        background: transparent;
+    }
+
+    .submitBtn{
+        background: transparent;
+    }
+
     .new{
+        margin-left: 30px;
         font-family: Georgia;
         font-style: italic;
     }
+
+    .likes{
+        display: none;
+    }   
+
 }
 
 @media only screen and (min-width : 1224px) {
 
     .new{
-        display: flex;
         margin-left: 30px;
         margin-top: 20px;
         font-style: italic;
@@ -29,6 +42,8 @@
         font-style: italic;
         font-size: 25px;
         padding-right: 20px;
+        text-transform: capitalize;
+        background: transparent;
     }
 
     .form-label {
@@ -44,11 +59,11 @@
         border-radius:30%;
         color: whitesmoke;
         background-color: black;
+        background: transparent;
     }
 
     .preview-image{
-        width:350px;
-        
+        width:500px;
         border: 1px solid #c0c0c0;
         margin-right: 50px;
         font-size: 20px;
@@ -59,4 +74,16 @@
         color: red;
     }
 
+    .form-control{
+        background: transparent;
+    }
+
+    .likes{
+        display: block;
+        margin: auto;
+        float: right;
+        margin-right: 20px;
+    }   
+  
+  
 }
