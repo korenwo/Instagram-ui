@@ -1,9 +1,8 @@
 import './App.scss';
 import { useEffect, useState } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
 import Header from './Header/Header';
 import Register from './Register/Register';
-import ProfileEdit from './ProfileEdit/ProfileEdit';
+import { Switch, Route, useHistory } from 'react-router-dom';
 import Login from './Login/Login';
 import Feed from './Feed/Feed';
 import { UserService } from './services/user.service';
@@ -11,6 +10,7 @@ import { UserContext } from './user-context';
 import PostCreate from './PostCreate/PostCreate';
 import PostPage from './PostPage/PostPage';
 import Profile from './Profile/Profile';
+import ProfileEdit from './ProfileEdit/ProfileEdit';
 
 function App() {
   const history = useHistory();
@@ -33,7 +33,7 @@ function App() {
   }, [history]);
 
   function isLoggedIn() {
-    return !!Object.keys(user).length;
+    return Boolean(Object.keys(user).length);
   }
 
   return (
@@ -45,27 +45,28 @@ function App() {
             <Route path="/register">
               <Register/>
             </Route>
-            <Route path="/profileEdit">
-              <ProfileEdit/>
-            </Route>
             <Route path="/login">
-              <Login />
+              <Login/>
             </Route>
-            <Route path="/post/Create">
+            <Route path="/post/create">
               <PostCreate />
             </Route>
             <Route path="/post/:id">
               <PostPage />
-              </Route> 
-            <Route path="/profile/:username">
-              <Profile /> 
             </Route>
+            <Route path="/profile/:username">
+              <Profile />
+              </Route> 
+            <Route path="/profileEdit">
+              <ProfileEdit />
+              </Route>  
             <Route path="/" exact>
               <Feed />
             </Route>
           </Switch>
         </div>
       </div>
+      { isLoggedIn () && <Header />}
     </UserContext.Provider>
   );
 }

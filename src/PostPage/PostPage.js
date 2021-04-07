@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './PostPage.scss';
 import { PostService } from './../services/post.service';
 import Avatar from './../common/Avatar/Avatar';
@@ -39,7 +39,7 @@ function PostPage () {
                     <div>{post.createAt}</div>
                     <div>{post.user.description}</div>
                     <div>
-                        <img src={'data:; base64,' + post.image} className="Post__image" />
+                        <img src={'data:; base64,' + post.image} className="Post__image"  alt="" /> 
                     </div>
                     <PostLike post={post}></PostLike>
                     <Comments postId={post._id} />

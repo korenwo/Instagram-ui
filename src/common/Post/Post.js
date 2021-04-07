@@ -17,7 +17,7 @@ function Post ({ data,  small }) {
                     <Avatar image={user.avatar} />
                 </Link> 
             </div>}
-            <img className="image" src={'data:; base64,' + data.image} />
+            <img className="image" src={'data:; base64,' + data.image} alt=""/>
             {!small && <div className="datas">
                 <PostLike post={data}></PostLike>
                 <div>{data.userId.username} {data.description}</div>

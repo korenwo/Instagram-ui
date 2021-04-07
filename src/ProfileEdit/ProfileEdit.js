@@ -3,7 +3,6 @@ import './ProfileEdit.scss';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { useHistory } from 'react-router-dom';
 import { UserService } from './../services/user.service';
-import Profile from './../Profile/Profile';
 
 function ProfileEdit () {
 
