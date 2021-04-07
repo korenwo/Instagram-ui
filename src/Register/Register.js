@@ -1,25 +1,24 @@
-import  React, { useState } from 'react';
+import { React, useState } from 'react';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import { useHistory } from 'react-router-dom';
 import './Register.scss'
 import { registerSchema } from './register.schema';
 import { UserService } from '../services/user.service';
 
-function Register () {
+function Register (props) {
 
     const history = useHistory();
 
-    const [showSucces, setSuccess] = useState(false);
+    const [errorMsg, setErrorMsg] = useState();
 
     function submit(values) {
-        UserService.create(values)
-            .then(res => {
-                if(res.status === 201) {
-                    setSuccess(true);
-                    setTimeout(()=> history.push('/login'), 2000);
+        UserService.Create(values)
+            .then(data => {
+                if(data.isSuccess) {
+                    history.push('/');
                     return;
                 }
-                console.log('failure!!!');
+                setErrorMsg(data.message);
             });
     }
 
@@ -51,7 +50,7 @@ function Register () {
                     <div className="form-group">
                         <button type="submit" className="btn btn-success">Sign Up</button>
                     </div>
-                    <p className="error">{ErrorMessage}</p>
+                    <p className="error">{errorMsg}</p>
                 </Form>
             </Formik>
         </div>

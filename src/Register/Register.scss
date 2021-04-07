@@ -1,12 +1,16 @@
 @media only screen and (max-device-width : 480px) {
 
     .register {
-        position: block;
-        margin: auto;
+        display: block;
+        margin:auto;
+        margin-top: 50px;
+        width: 300px;
+        border: 1px solid #c0c0c0;
+        background-color: white;
         text-align: center;
-        font-size: 18px;
-    }
+        border: 3px solid #383197;
 
+    }
     .form-group{
         font-size: 11px;
     }

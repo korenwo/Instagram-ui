@@ -6,21 +6,24 @@
         margin: auto;
     }
 
-    .login{
-        font-size: 20px;
-        text-align: center;
-        margin-top: 10px;
+    .Login {
+        display: block;
+        margin: auto;
+        max-width: 12em;
+        background-color: #fff;
+        border: 3px solid #383197;
+        margin-top: 20px;
     }
+
 
     .sum2Image{
         display: none;
     }
 
     .form-control{
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 20px;
-        width: 150px;
-        margin-left: auto;
+        width: 120px;
         border-radius: 30px;
     }
 
