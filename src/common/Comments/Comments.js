@@ -29,8 +29,8 @@ function Comments ({ postId }) {
     return (
         <div>
             <details>
-                <summary className="comment">Comments...... <FontAwesomeIcon icon={ faComment } size="lg"  /></summary>
-            <hr></hr>
+                <summary className="comment">Comments...... <FontAwesomeIcon icon={ faComment } size="sm"  /></summary>
+
            
                 
                     <div className="comment">{comments.map(comment => <Comment key={comment._id} comment={comment} />)}</div>

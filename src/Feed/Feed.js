@@ -16,13 +16,14 @@ function Feed () {
 
     return (
         <div>
-            <div className= "posts">
-                {posts.map(post => (
-                    <Post key={post._id} data={post}/>
+           <div className="photosContainer">
+            {posts.map(post => (
+                    <Post key={post._id} data={post} />
                 ))}
             </div>
+ 
+
     </div>
     );
 }
-
 export default Feed;

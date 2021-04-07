@@ -24,6 +24,7 @@ function Post ({ data,  small }) {
                 <TimeAgo datetime={data.createdAt}/>
                 <Comments postId={data._id}></Comments>
             </div>}
+            
         </div>        
     );
 }
