@@ -46,7 +46,7 @@ function PostCreate () {
                             name="image"
                             className="form-control" 
                             onChange={(e) => { setFieldValue('image', e.target.files[0]); setImg(URL.createObjectURL(e.target.files[0])); }} /> 
-                            <img src={img} alt="Preview" className="preview-image" />   
+                            <img src={img} alt="Preview" className="preview-image1" />   
                         <div className="create">description</div>
                         <ErrorMessage component="small" name="image" className="PostCreate" />
                         <label className="form-label" htmlFor="discription"></label>
