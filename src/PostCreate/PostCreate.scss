@@ -1,21 +1,30 @@
 @media only screen and (max-device-width : 480px) {
 
+    .new{
+        margin-left: 30px;
+        margin-top: 20px;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: whitesmoke;
+    }
+
     .preview-image{
-        width:100px;
+        width:200px;
     }
 
     form{
         background: transparent;
+        
     }
 
     .submitBtn{
         background: transparent;
     }
 
-    .new{
-        margin-left: 30px;
-        font-family: Georgia;
-        font-style: italic;
+    
+    .form-label {
+        background: transparent;
     }
 
     .likes{

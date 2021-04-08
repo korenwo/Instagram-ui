@@ -66,7 +66,7 @@ function App() {
           </Switch>
         </div>
       </div>
-      { isLoggedIn () && <Header />}
+      { isLoggedIn () }
     </UserContext.Provider>
   );
 }
