@@ -1,27 +1,42 @@
 @media only screen and (max-device-width : 480px) {
 
+   
+    .editContainer {
+        display: block;
+        margin:auto;
+        text-align: center;
+        background: transparent;
+        color: whitesmoke;
+    }
+
     .edit{
-        font-size: 20px;
-        font-style: italic;
+        font-size: 12px;
+    }
+    .form-group{
+        text-align: center;
+        display: block;
+        margin: auto;
     }
 
 
-    form {
-        margin-top: 50px;
-        width: 50%;
-        background-color: white;
-    }
-
-    .lable{
-        display: none;
+    .submitBtn{
+        background: transparent;
+        border-radius: 20px;
+        color: whitesmoke;
     }
 
     .change{
-        color: 	#800080;
+        color: rgb(83, 157, 232);
         font-size: 12px;
-        font-style: italic;
-        }    
-}    
+        }
+
+        .preview-image {
+            height: 35px;
+            width: 35px;
+        }
+
+}
+
 
 @media only screen and (min-width : 1224px) {
    
@@ -31,9 +46,10 @@
         width: 40%;
         margin:auto;
         margin-top: 50px;
-        border: 1px solid #c0c0c0;
         background-color: white;
         text-align: center;
+        background: transparent;
+        color: whitesmoke;
     }
 
     .form-group{
@@ -41,13 +57,14 @@
         padding-top: 20px;
         padding-bottom: 20px;
         width: 300px;
-        margin-left: 25%;
+        display: block;
+        margin: auto;
     }
 
 
     .submitBtn{
-        background-color: #00ffff;;
-        color: whitesmoke;
+        background: transparent;
+        border-radius: 20px;
     }
 
     .change{
@@ -55,5 +72,8 @@
         font-size: 15px;
         }
 
+    .form-control{
+        background-color: whitesmoke;
+    }
 }
 

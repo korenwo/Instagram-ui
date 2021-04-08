@@ -57,11 +57,6 @@ function Search () {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Search">
-                        <FontAwesomeIcon icon= { faSearch } size="lg" />
-                    </Link>
-                </li>
-                <li>
                 <FontAwesomeIcon icon= { faSignOutAlt } size="lg"  className="out" onClick={logOut}></FontAwesomeIcon>
                 </li>
             </ul>

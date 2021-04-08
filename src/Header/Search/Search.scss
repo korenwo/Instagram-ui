@@ -12,9 +12,13 @@
         height: 20px;
     }
 
-
     .searchUser{
-        display: none;
+       position: absolute;
+       margin-top: 15px;
+       margin-left: 220px;
+       border-radius: 20px;
+       background: transparent;
+       max-width: 100px; 
     }
 
 }
