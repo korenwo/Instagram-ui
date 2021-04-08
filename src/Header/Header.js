@@ -7,7 +7,7 @@ import Search from './Search/Search';
 function Header () {
     return (
         <div>
-            <h1 className="headerPhone">instagram</h1>
+            <h1 className="headerPhone"><a className="headerPhone" href="/"><img src={logo} className="headerPhone" alt="logo" /></a></h1>
             <header className="header">
                 <nav className="navbarPhone">
                     <nav className="navbar">
