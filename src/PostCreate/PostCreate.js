@@ -28,7 +28,6 @@ function PostCreate () {
             });
             history.push('/');
         } catch(err) {
-            console.log(err);
         }  
     }
 

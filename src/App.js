@@ -26,7 +26,6 @@ function App() {
         }
         setUser(user);
       } catch(err) {
-        console.log(err);
       }
     }
     getMe();  
