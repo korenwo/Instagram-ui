@@ -8,19 +8,19 @@ import Comments from './../Comments/Comments';
 
 function Post ({ data,  small }) {
 
-    const [user] = useState({});    
+    const [user] = useState({});
     
     return (
         <div className={"post " + (small ? 'small' : '')}>
             {!small && <div className="photoHead">
-                <Link to={'/profile/' + user.username}>
-                    <Avatar image={user.avatar} />
+                <Link to={'/profile/' + data.userId.username}>
+                    <Avatar image={user.avatar} /> {data.userId.username}
                 </Link> 
             </div>}
-            <img className="image" src={'data:; base64,' + data.image} alt=""/>
+            <img className="image1" src={'data:; base64,' + data.image} alt=""/>
             {!small && <div className="datas">
                 <PostLike post={data}></PostLike>
-                <div>{data.userId.username} {data.description}</div>
+                <div>{data.description}</div>
                 <TimeAgo datetime={data.createdAt}/>
                 <Comments postId={data._id}></Comments>
             </div>}

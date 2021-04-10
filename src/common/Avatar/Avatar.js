@@ -6,8 +6,6 @@ function Avatar (props) {
 
     const image = props.image || avatar;
   
-            console.log(props, 'avatar')
-
     return (
         <img src={image} className="Avatar" alt="Avatar" />
     );

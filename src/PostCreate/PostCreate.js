@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom';
 import { PostCreateSchema } from './post-create.schema';
 import environment  from './../environments/index';
 import { UserService } from './../services/user.service';
-import likes from './likes.jpg'
 
 function PostCreate () {
 
@@ -33,7 +32,6 @@ function PostCreate () {
 
     return (
         <div className="new">New Post
-            <img src={likes} className="likes" alt="likes" />
             <Formik
                 initialValues={{image:"", description: ''}}
                 validationSchema={PostCreateSchema}

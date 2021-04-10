@@ -25,10 +25,6 @@
         background: transparent;
     }
 
-    .likes{
-        display: none;
-    }   
-
 }
 
 @media only screen and (min-width : 1224px) {
@@ -63,7 +59,7 @@
     }
 
     .preview-image1{
-        width:520px;
+        width:800px;
     }
 
     .PostCreate{
@@ -74,13 +70,5 @@
     .form-control{
         background: transparent;
     }
-
-    .likes{
-        display: block;
-        margin: auto;
-        float: right;
-        margin-right: 20px;
-    }   
-  
   
 }
