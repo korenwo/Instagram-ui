@@ -73,7 +73,7 @@ export class UserService {
       const res = await fetch(environment.apiUrl + '/user/' + id + '/follow', {
           method: 'POST',
           headers:{
-              Authorization:UserService.getToken()
+              Authorization: UserService.getToken()
           }
       });
       return res.json();

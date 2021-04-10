@@ -9,12 +9,14 @@ function HeaderAvatar() {
     const { user } = useContext(UserContext);
 
     return (
-        <div className="HeaderAvatar">
-            <Link to={'/profile/' + user.username}>
-            <Avatar />
-           </Link> 
-        </div>
-
+        <>
+            {Object.keys(user).length ? <div className="HeaderAvatar">
+                <Link to={'/profile/' + user.username}>
+                    <Avatar />
+            </Link> 
+            </div>
+            :''}
+        </>
     );
 }
 export default HeaderAvatar;

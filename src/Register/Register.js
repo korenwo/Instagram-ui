@@ -12,13 +12,14 @@ function Register (props) {
     const [errorMsg, setErrorMsg] = useState();
 
     function submit(values) {
+        setErrorMsg('');
         UserService.Create(values)
             .then(data => {
-                if(data.isSuccess) {
-                    history.push('/');
-                    return;
+                if(data.status === 201) {
+                    history.push('/login');
+                } else {
+                    setErrorMsg(data.message||'Error');
                 }
-                setErrorMsg(data.message);
             });
     }
 

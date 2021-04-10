@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faPlusSquare, faSearch, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPlusSquare, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 import './Search.scss';
 import { UserService } from '../../services/user.service';
 import SearchResult from './SearchResult/SearchResult';
 import  Cookies  from 'js-cookie';
+import { UserContext } from '../../user-context';
 
 function Search () {
 
     const [query, setQuery] = useState('');
     const [users, setUsers] = useState([]);
+    const { user } = useContext(UserContext);
     const history = useHistory();
-    
+
     useEffect(()=> {
         if (!query) {
             setUsers([]);
@@ -34,6 +36,7 @@ function Search () {
     function logOut() {
         Cookies.set('instagram-user', '', { expires: 30 });
         history.push('/Login');
+        window.location.reload();
     }
 
     return (
@@ -45,7 +48,7 @@ function Search () {
                 })}
                 {hasNoResult () && 'Sorry, no user!'}
             </div>
-            <ul className="icons">
+            {Object.keys(user).length ? <ul className="icons">
                 <li>
                     <Link to="/">
                         <FontAwesomeIcon icon={faHome} size="lg" />
@@ -57,9 +60,9 @@ function Search () {
                     </Link>
                 </li>
                 <li>
-                <FontAwesomeIcon icon= { faSignOutAlt } size="lg"  className="out" onClick={logOut}></FontAwesomeIcon>
+                    <FontAwesomeIcon icon= { faSignOutAlt } size="lg"  className="out" onClick={logOut}></FontAwesomeIcon>
                 </li>
-            </ul>
+            </ul> : ''}
         </div>
     );
 }   

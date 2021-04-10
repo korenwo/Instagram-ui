@@ -4,10 +4,7 @@ import { UserService } from '../../services/user.service';
 
 function Followers ({user}) {
     
-    const [followers, setFollowrs] = useState (user?.followers?.length || 0 );
-
-    if(user.followers) {}
-    setFollowrs(user?.followers?.length);
+    const [followers, setFollowrs] = useState(user?.followers?.length || 0 );
 
     async function addFollower () {
         const res = await UserService.follow(user._id);

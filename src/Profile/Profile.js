@@ -27,7 +27,7 @@ function Profile () {
     <>
         <ProfileHeader username={username} postNum={posts.length} />
         <hr />
-        <div className="photosContainer">
+        <div className="photosContainer1">
             {posts.map(post => (
                 <Post key={post._id} data={post} small={true} />
             ))}
