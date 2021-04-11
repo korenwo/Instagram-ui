@@ -4,7 +4,6 @@ import Cookies from 'js-cookie';
 import { useHistory, Link } from 'react-router-dom';
 import { loginSchema } from './login.schema'; 
 import './Login.scss';
-import insta from './insta.png'
 import { UserService } from '../services/user.service';
 import { UserContext } from './../user-context';
 
@@ -31,7 +30,6 @@ function Login () {
 
     return (
         <div className="loginContainer">
-            <img src={insta} className="insta" alt="Instagram" />
             <div className="Login">
                 {showError && <div className="alert alert-denger">Incorrect username or password</div>}
                 <Formik initialValues={{username: '', email: '', password: ''}} validationSchema={loginSchema} onSubmit={submit}>

@@ -14,7 +14,7 @@ function Followers ({user}) {
     return (
         <div>
             {followers && <span>followers: {followers}</span>}
-            <button onClick={addFollower}>Follow</button>
+            <button onClick className="follow">{addFollower}Follow</button>
         </div>
     );
 }

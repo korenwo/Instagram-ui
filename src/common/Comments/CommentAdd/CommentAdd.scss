@@ -1,12 +1,33 @@
+@media only screen and (max-device-width : 480px) {
+    
+    .form-control{
+        height:15px;
+        margin-bottom: 0px;
+    
+    }
 
-.form-control{
-    height:20px;
+    .postComment{
+        display: inline-block;
+        background: transparent;
+        color: whitesmoke;
+        border: transparent;
+    }
 }
 
-.postComment{
-    height: 1.5em;
-    background: transparent;
-    width: 50px;
-    color: whitesmoke;
+@media only screen and (min-width : 1224px) {
+
+    .form-control{
+        height:15px;
+    
+    }
+
+    .postComment{
+        background: transparent;
+        color: whitesmoke;
+        border: transparent;
+    }
+
 }
+  
+
 

@@ -1,32 +1,20 @@
 @media only screen and (max-device-width : 480px) {
 
-    .insta{
-        width: 60px;
-        display: block;
-        margin: auto;
-    }
-
     .Login {
         display: block;
         margin:auto;
-        margin-top: 50px;
         width: 200px;
         border: 1px solid #c0c0c0;
         background: transparent;
         text-align: center;
         border: 3px solid #383197;
         color: whitesmoke;
+        padding-bottom: 10px;
 
-    }
-
-
-    .sum2Image{
-        display: none;
     }
 
     .form-control{
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-top: 20px;
         width: 120px;
         border-radius: 30px;
     }
@@ -34,7 +22,7 @@
     button{
         display: block;
         margin: auto;
-        margin-top: 10px;
+        margin-top:20px;
         border-radius: 30px;
         
     }
@@ -60,13 +48,6 @@
         border: 3px solid #383197;
         padding: 1em 3em;
         margin-top: 20px;
-    }
-
-    .insta{
-        margin: auto;
-        display: block;
-        height: 200px;
-        margin-top: 30px;
     }
 
     .form-control{

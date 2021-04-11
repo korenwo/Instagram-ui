@@ -12,7 +12,7 @@ export class PostService {
     }
 
     static async get(id) {
-        const res = await fetch(environment.apiUrl + '/post/' + id, {
+        const res = await fetch(environment.apiUrl + '/posts/' + id, {
             headers:{
                 Authorization:UserService.getToken()
             }

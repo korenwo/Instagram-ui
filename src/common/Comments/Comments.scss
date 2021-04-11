@@ -1,4 +1,7 @@
 @media only screen and (max-device-width : 480px) {
+    details {
+        width: 400px;
+    }     
 
     .comments{
         font-size: 10px;
@@ -8,11 +11,10 @@
 @media only screen and (min-width : 1224px) {
   
     details {
-        width: 200px;
+        width: 300px;
     }     
 
     summary{
-        background-color: black;
-        border-radius: 20%;
+        background: transparent;
     }
 }

@@ -24,7 +24,6 @@ function ProfileHeader ({ username, postNum }) {
             <span className="bigAvatar"><Avatar image={user.avatar} /></span>
             <div>
                 <h2>{user.username}</h2>
-                <button> <Link to="/ProfileEdit" >Edit Profile</Link></button>
                 <Link to="/ProfileEdit">
                     <FontAwesomeIcon icon={faCog} />
                 </Link>

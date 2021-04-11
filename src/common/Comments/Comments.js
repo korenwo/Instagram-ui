@@ -29,13 +29,12 @@ function Comments ({ postId }) {
     return (
         <div>
             <details>
-                <summary className="comment">Comments...... <FontAwesomeIcon icon={ faComment } size="sm"  /></summary>
+                <summary className="comment">Add a Comment... <FontAwesomeIcon icon={ faComment } size="sm"  /></summary>
 
            
                 
                     <div className="comment">{comments.map(comment => <Comment key={comment._id} comment={comment} />)}</div>
                         <CommentAdd postId={postId} onCommentAdd={onCommentAdd} />
-                
             </details> 
         </div>
         
