@@ -50,7 +50,7 @@ function Search () {
             </div>
             {Object.keys(user).length ? <ul className="icons">
                 <li>
-                    <Link to="/">Search.............
+                    <Link to="/">
                         <FontAwesomeIcon icon={faHome} size="lg" />
                     </Link>
                 </li>

@@ -2,6 +2,7 @@
     .ProfileHeader{
         display: flex;
         align-items: center;
+        color: whitesmoke;
     }
 
      
@@ -11,6 +12,10 @@
         margin-right: 50px;
     }
 
+    button{ 
+        background: transparent;
+        color: whitesmoke;
+    }
 }
 
 @media only screen and (min-width : 1224px) {
@@ -20,10 +25,11 @@
         margin: auto;
         display: flex;
         align-items: center;
+        color: whitesmoke;
     }
 
     button{
-        background-color:white;
+        background: transparent;
         width: 90px;
         height: 30px;
         border-radius: 30px;
