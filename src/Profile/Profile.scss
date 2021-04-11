@@ -8,7 +8,10 @@
     .photosContainer2 .image1{
         width: 100px;
         height: auto;
+        border-style: outset;
+        margin-left: 10px;
     }
+    
 }
 
 
@@ -19,9 +22,11 @@
         flex-wrap: wrap;
     }
 
-    .photosContainer2 .image{
+    .photosContainer2 .image1{
         width: 300px;
         height: auto;
+        border-style: outset;
+        margin-left: 10px;
     }
 
 }
