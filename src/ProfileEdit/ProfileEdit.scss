@@ -4,9 +4,13 @@
     .editContainer {
         display: block;
         margin:auto;
-        text-align: center;
+        width: 300px;
+        border: 1px solid #c0c0c0;
         background: transparent;
+        text-align: center;
+        border: 3px solid #383197;
         color: whitesmoke;
+        padding-bottom: 10px;
     }
 
     .edit{
@@ -21,8 +25,8 @@
 
     .submitBtn{
         background: transparent;
-        border-radius: 20px;
         color: whitesmoke;
+        border: transparent;
     }
 
     .change{
@@ -42,14 +46,15 @@
    
 
     .editContainer {
-        position: relative;
-        width: 40%;
+        display: block;
         margin:auto;
-        margin-top: 50px;
-        background-color: white;
-        text-align: center;
+        width: 300px;
+        border: 1px solid #c0c0c0;
         background: transparent;
+        text-align: center;
+        border: 3px solid #383197;
         color: whitesmoke;
+        padding-bottom: 20px;
     }
 
     .form-group{
