@@ -1,23 +1,28 @@
 @media only screen and (max-device-width : 480px) {
 
     .new{
-        font-size: 20px;
-        margin-top: 20px;
-        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        margin:auto;
+        width: 300px;
+        border: 1px solid #c0c0c0;
+        background: transparent;
+        text-align: center;
+        border: 3px solid #383197;
         color: whitesmoke;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        font-size: 30px;
+        padding-top: 2px;
     }
 
     .preview-image1{
         width:200px;
     }
 
-    form{
-        background: transparent;
-        
-    }
 
     .submitBtn{
         background: transparent;
+        
     }
 
     
@@ -30,10 +35,18 @@
 @media only screen and (min-width : 1224px) {
 
     .new{
-        margin-left: 20px;
-        font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        margin:auto;
+        width: 300px;
+        border: 1px solid #c0c0c0;
+        background: transparent;
+        text-align: center;
+        border: 3px solid #383197;
         color: whitesmoke;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        font-size: 30px;
+        padding-top: 2px;
     }
 
     .create {
@@ -69,6 +82,7 @@
 
     .form-control{
         background: transparent;
+        border-radius: 30px;
     }
   
 }
