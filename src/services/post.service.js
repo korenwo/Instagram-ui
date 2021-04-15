@@ -4,7 +4,7 @@ import environment from '../environments/index'
 export class PostService {
 
     static feed() {
-       return fetch(environment.apiUrl + '/post?sort', {
+       return fetch(environment.apiUrl + '/post', {
             headers: {
                 Authorization:UserService.getToken()
             }
