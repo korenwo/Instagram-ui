@@ -53,14 +53,12 @@
     }
 
     .datas{
+        display: block;
+        margin-top: 20px;
         font-family: Georgia;
-        max-width: 391px;
-        display: flex;
-        flex-wrap: wrap;
         border: 2.8px solid #c0c0c0;
-        padding-left: 10px;
+        padding-left: 30px;
         color: white;
-        margin-left: 20px;
         border: transparent;
         font-size: 15px;
     }
@@ -68,8 +66,7 @@
     .image1{
         display: flex;
         flex-wrap: wrap;
-        width: 400px;
-        height: 600px;
+        width: 700px;
         margin-left: 20px;
     }
   

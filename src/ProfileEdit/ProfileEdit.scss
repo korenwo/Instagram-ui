@@ -52,7 +52,7 @@
         border: 1px solid #c0c0c0;
         background: transparent;
         text-align: center;
-        border: 3px solid #383197;
+        border: transparent;
         color: whitesmoke;
         padding-bottom: 20px;
     }
@@ -79,6 +79,10 @@
 
     .form-control{
         background-color: whitesmoke;
+    }
+
+    .preview-image5{
+        width: 400px;
     }
 }
 

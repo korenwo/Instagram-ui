@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { UserService } from '../../services/user.service';
 import Avatar from '../../common/Avatar/Avatar';
 import './ProfileHeader.scss';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
 import Followers from '../Followers/Followers';
 
 function ProfileHeader ({ username, postNum }) {
@@ -24,9 +21,6 @@ function ProfileHeader ({ username, postNum }) {
             <span className="bigAvatar"><Avatar image={user.avatar} /></span>
             <div>
                 <h2>{user.username}</h2>
-                <Link to="/ProfileEdit">
-                    <FontAwesomeIcon icon={faCog} />
-                </Link>
                 <p className="userPost">{postNum} posts</p>
                 <Followers user={user} />
             </div>    

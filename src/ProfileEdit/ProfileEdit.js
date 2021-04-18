@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './ProfileEdit.scss';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { useHistory } from 'react-router-dom';
-import { UserService } from './../services/user.service';
+import { UserService } from '../services/user.service';
 
 function ProfileEdit () {
 
@@ -38,7 +38,7 @@ return (
                             name="avatar"
                             className="form-control" 
                             onChange={(e) => { setFieldValue('avatar', e.target.files[0]); setImg(URL.createObjectURL(e.target.files[0])); }} /> 
-                        <img src={img} alt="Preview" className="preview-image" />   
+                        <img src={img} alt="Preview" className="preview-image5" />   
                         
                         <div className="form-group mb-3">
                             <label htmlFor="password">New Password</label>

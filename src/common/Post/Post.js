@@ -20,10 +20,11 @@ function Post ({ data,  small }) {
                 <PostLike post={data}></PostLike>
                 <div>{data.description}</div>
                 <TimeAgo datetime={data.createdAt}/>
-                <Link to={'/profile/' }>
-                    <Avatar image={user.avatar} />
+                 <Link to={'/profile/' + data.userId.username}>
+                    <Avatar image={user.avatar} /> {data.userId.username}
                 </Link> 
                 <Comments postId={data._id}></Comments>
+                <hr></hr>
             </div>}
             
         </div>        

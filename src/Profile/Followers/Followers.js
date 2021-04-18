@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './Followers.scss';
 import { UserService } from '../../services/user.service';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 function Followers ({user}) {
     
@@ -13,8 +15,8 @@ function Followers ({user}) {
     
     return (
         <div>
-            {followers && <span>followers: {followers}</span>}
-            <button onClick className="follow">{addFollower}Follow</button>
+             <div onClick={addFollower }><FontAwesomeIcon icon={ faEye } color={followers ? 'blue' : 'white'} /></div> 
+            <div className="followers">Followers {followers}</div>
         </div>
     );
 }

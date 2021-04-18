@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faPlusSquare, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPlusSquare, faSignOutAlt, faCog } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 import './Search.scss';
 import { UserService } from '../../services/user.service';
@@ -61,6 +61,11 @@ function Search () {
                 </li>
                 <li>
                     <FontAwesomeIcon icon= { faSignOutAlt } size="lg"  className="out" onClick={logOut}></FontAwesomeIcon>
+                </li>
+                <li>
+                    <Link to="/ProfileEdit">
+                        <FontAwesomeIcon icon={faCog} />
+                    </Link>
                 </li>
             </ul> : ''}
         </div>
