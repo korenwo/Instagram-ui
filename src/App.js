@@ -47,6 +47,9 @@ function App() {
             <Route path="/login">
               <Login/>
             </Route>
+            <Route path="/feed">
+              <Feed/>
+            </Route>
             <Route path="/post/create">
               <PostCreate />
             </Route>
